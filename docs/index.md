@@ -431,6 +431,16 @@ You can even trigger standard tv4 error messages, just prefix the error code wit
 scope.$broadcast('schemaForm.error.name','tv4-302',false);
 ```
 
+If you want to pass invalid values to your backend consider adding ``allowInvalid`` in
+your [ngModelOptions](https://docs.angularjs.org/api/ng/directive/ngModelOptions).
+
+```json
+    {
+        ngModelOptions: {
+            allowInvalid: true
+        }
+    }
+```
 
 ### Using ngModelController
 Another way to validate your fields is to use Angulars built in support for validator functions
